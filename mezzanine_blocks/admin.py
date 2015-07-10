@@ -24,7 +24,7 @@ class BlockAdmin(admin.ModelAdmin):
             "fields": ["title", "content", "category"],
         }),
         (_("Advanced data"), {
-            "fields": ['login_required', 'show_title', "slug" ],
+            "fields": ['login_required', 'show_title', "slug"],
             "classes": ("collapse-closed",)
         }),
     )
@@ -34,6 +34,7 @@ class RichBlockAdmin(admin.ModelAdmin):
     ordering = ('title', 'category')
     list_display = ('title', 'category', 'login_required', 'show_title')
     list_editable = ('login_required', 'show_title', 'category')
+    list_filter = ('category',)
     search_fields = ('title', 'content')
 
     fieldsets = (
@@ -41,7 +42,7 @@ class RichBlockAdmin(admin.ModelAdmin):
             "fields": ["title", "content", "category"],
         }),
         (_("Advanced data"), {
-            "fields": ['login_required', 'show_title', "slug" ],
+            "fields": ['login_required', 'show_title', "slug"],
             "classes": ("collapse-closed",)
         }),
     )
@@ -59,7 +60,7 @@ class ImageBlockAdmin(admin.ModelAdmin):
             "fields": ["title", "description", "category", "image", 'url'],
         }),
         (_("Advanced data"), {
-            "fields": [('height', 'width', 'quality'), 'login_required', 'show_title', "slug" ],
+            "fields": [('height', 'width', 'quality'), 'login_required', 'show_title', "slug"],
             "classes": ("collapse-closed",)
         }),
     )
