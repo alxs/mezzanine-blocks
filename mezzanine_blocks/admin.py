@@ -18,10 +18,11 @@ class BlockAdmin(admin.ModelAdmin):
     list_display = ('title', 'category', 'login_required', 'show_title')
     list_editable = ('login_required', 'show_title', 'category')
     search_fields = ('title', 'content')
+    filter_horizontal = ('pages',)
 
     fieldsets = (
         (None, {
-            "fields": ["title", "content", "category"],
+            "fields": ["title", "pages", "order", "content", "category"],
         }),
         (_("Advanced data"), {
             "fields": ['login_required', 'show_title', "slug"],
@@ -36,10 +37,11 @@ class RichBlockAdmin(admin.ModelAdmin):
     list_editable = ('login_required', 'show_title', 'category')
     list_filter = ('category',)
     search_fields = ('title', 'content')
+    filter_horizontal = ('pages',)
 
     fieldsets = (
         (None, {
-            "fields": ["title", "content", "category"],
+            "fields": ["title", "pages", "order", "content", "category"],
         }),
         (_("Advanced data"), {
             "fields": ['login_required', 'show_title', "slug"],
@@ -54,10 +56,11 @@ class ImageBlockAdmin(admin.ModelAdmin):
     list_display_links = ('admin_thumb', 'title')
     list_editable = ('login_required', 'show_title', 'category', 'height', 'width', 'quality')
     search_fields = ('title', 'description', 'url')
+    filter_horizontal = ('pages',)
 
     fieldsets = (
         (None, {
-            "fields": ["title", "description", "category", "image", 'url'],
+            "fields": ["title", "pages", "order", "description", "category", "image", 'url'],
         }),
         (_("Advanced data"), {
             "fields": [('height', 'width', 'quality'), 'login_required', 'show_title', "slug"],
