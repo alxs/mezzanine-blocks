@@ -5,7 +5,6 @@ from mezzanine.conf import settings
 from mezzanine.core.models import Slugged, RichText
 from mezzanine.core.fields import FileField, RichTextField
 from mezzanine.core.templatetags.mezzanine_tags import thumbnail
-from mezzanine.pages.models import Page
 from mezzanine.utils.models import AdminThumbMixin
 from .category import BlockCategory
 
@@ -16,8 +15,6 @@ class BaseBlock(Slugged):
     category = models.ForeignKey(BlockCategory, null=True, blank=True)
     login_required = models.BooleanField(_("Login required"), help_text=_("If checked, only logged in users can view this page"), default=False)
     show_title = models.BooleanField(_("Show title"), help_text=_("If checked, show block title"), default=False)
-    pages = models.ManyToManyField(Page, blank=True)
-    order = models.PositiveSmallIntegerField(_('Reihenfolge'), default=0)
 
     def save(self, *args, **kwargs):
         super(BaseBlock, self).save(*args, **kwargs)
@@ -25,7 +22,6 @@ class BaseBlock(Slugged):
 
     class Meta:
         abstract = True
-        ordering = ('order',)
 
 
 class Block(BaseBlock):
