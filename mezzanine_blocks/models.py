@@ -9,12 +9,23 @@ from mezzanine.utils.models import AdminThumbMixin
 from .category import BlockCategory
 
 
+class Section(Slugged):
+    """A page section the block belongs to
+    """
+
+    class Meta:
+        verbose_name = _('Section')
+        verbose_name_plural = _('Sections')
+
+
 class BaseBlock(Slugged):
     """Base Block
     """
     category = models.ForeignKey(BlockCategory, null=True, blank=True)
     login_required = models.BooleanField(_("Login required"), help_text=_("If checked, only logged in users can view this page"), default=False)
     show_title = models.BooleanField(_("Show title"), help_text=_("If checked, show block title"), default=False)
+    section = models.ForeignKey(Section, null=True, blank=True,
+        on_delete=models.SET_NULL, verbose_name=_('Section'))
 
     def save(self, *args, **kwargs):
         super(BaseBlock, self).save(*args, **kwargs)
