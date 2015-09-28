@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mittelhof\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-28 17:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: mezzanine_blocks/admin.py:39 mezzanine_blocks/admin.py:57
+#: mezzanine_blocks/admin.py:75
+msgid "Advanced data"
+msgstr "Erweiterte Einstellungen"
+
+#: mezzanine_blocks/category.py:16
+msgid "Block category"
+msgstr "Block Kategorie"
+
+#: mezzanine_blocks/category.py:17
+msgid "Block categories"
+msgstr "Block Kategorien"
+
+#: mezzanine_blocks/defaults.py:7
+msgid "Block cache prefix."
+msgstr ""
+
+#: mezzanine_blocks/models.py:17 mezzanine_blocks/models.py:28
+msgid "Section"
+msgstr "Bereich"
+
+#: mezzanine_blocks/models.py:18
+msgid "Sections"
+msgstr "Bereiche"
+
+#: mezzanine_blocks/models.py:25
+msgid "Login required"
+msgstr "Login notwendig"
+
+#: mezzanine_blocks/models.py:25
+msgid "If checked, only logged in users can view this page"
+msgstr "Wenn ausgewählt können nur angemeldete Benutzer diese Seite sehen"
+
+#: mezzanine_blocks/models.py:26
+msgid "Show title"
+msgstr "Titel anzeigen"
+
+#: mezzanine_blocks/models.py:26
+msgid "If checked, show block title"
+msgstr "Wenn ausgewählt wird der Titel angezeigt"
+
+#: mezzanine_blocks/models.py:44
+msgid "Block"
+msgstr "Block"
+
+#: mezzanine_blocks/models.py:45
+msgid "Blocks"
+msgstr "Blöcke"
+
+#: mezzanine_blocks/models.py:52
+msgid "Rich Block"
+msgstr "Inhaltsblock"
+
+#: mezzanine_blocks/models.py:53
+msgid "Rich Blocks"
+msgstr "Inhaltsblöcke"
+
+#: mezzanine_blocks/models.py:59
+msgid "Image"
+msgstr "Bild"
+
+#: mezzanine_blocks/models.py:60
+msgid "Description"
+msgstr "Beschreibung"
+
+#: mezzanine_blocks/models.py:61
+msgid "External URL"
+msgstr "Externe URL"
+
+#: mezzanine_blocks/models.py:61
+msgid "Optional URL."
+msgstr "Optionale URL"
+
+#: mezzanine_blocks/models.py:63
+msgid "Height"
+msgstr "Höhe"
+
+#: mezzanine_blocks/models.py:63
+msgid "Height in pixels."
+msgstr "Höhe in Pixel"
+
+#: mezzanine_blocks/models.py:64
+msgid "Width"
+msgstr "Breite"
+
+#: mezzanine_blocks/models.py:64
+msgid "Width in pixels."
+msgstr "Breite in Pixel"
+
+#: mezzanine_blocks/models.py:65
+msgid "Quality"
+msgstr "Qualität"
+
+#: mezzanine_blocks/models.py:70
+msgid "Image Block"
+msgstr "Bild Block"
+
+#: mezzanine_blocks/models.py:71
+msgid "Image Blocks"
+msgstr "Bild Blöcke"
+
+#: mezzanine_blocks/views.py:41
+msgid "You are not allowed to edit this block"
+msgstr "Du hast nicht die notwendigen Rechte diesen Block zu bearbeiten"
