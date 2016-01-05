@@ -1,10 +1,10 @@
 from django.db import models
 from django.core.cache import cache
 from django.utils.translation import ugettext_lazy as _
-from mezzanine.conf import settings
+#from mezzanine.conf import settings
 from mezzanine.core.models import Slugged, RichText
 from mezzanine.core.fields import FileField, RichTextField
-from mezzanine.core.templatetags.mezzanine_tags import thumbnail
+#from mezzanine.core.templatetags.mezzanine_tags import thumbnail
 from mezzanine.utils.models import AdminThumbMixin
 from .category import BlockCategory
 
@@ -80,4 +80,5 @@ class ImageBlock(BaseBlock, AdminThumbMixin):
         if thumb is None:
             return ""
 
-        return "%s%s" % (settings.MEDIA_URL, thumbnail(thumb, self.width, self.height, self.quality))
+        #return "%s%s" % (settings.MEDIA_URL, thumbnail(thumb, self.width, self.height, self.quality))
+        raise NotImplementedError('Calling thumbnail triggers AppRegistryNotReady!')
